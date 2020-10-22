@@ -18,15 +18,20 @@ public class Start {
             List<ColorValue> data = Arrays.asList(mapper.readValue(new File(cls.getClassLoader().getResource("testData.json").getFile()), ColorValue[].class));
             data.forEach(
                     colorValue -> {
-                        Optional<Color> returned = detector.findColor(colorValue.getValue());
-                        if(returned.isPresent()){
-                            System.out.println(
-                                    String.format(
-                                            "found the color %s for value %s so the associated year is %s",
-                                            returned.get().getName(),
-                                            colorValue.getValue(),
-                                            returned.get().getYear()
-                                    ));
+                        List<Color> returned = detector.findColor(colorValue.getValue());
+                        if(!returned.isEmpty()){
+                            returned.forEach(
+                                c -> {
+                                    System.out.println(
+                                            String.format(
+                                                    "found the color %s for value %s so the associated year is %s",
+                                                    c.getName(),
+                                                    colorValue.getValue(),
+                                                    c.getYear()
+                                            ));
+
+                                }
+                            );
                         }
                     }
             );

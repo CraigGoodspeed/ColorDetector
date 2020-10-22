@@ -3,9 +3,9 @@
     "name": "pink",
     "ranges": [
       {
-        "max": 16756947,
-        "min": 16756947,
-        "variance" : "0.001"
+        "max": 16758465,
+        "min": 16716947,
+        "variance" : "0.01"
       }
     ],
     "year": 2019

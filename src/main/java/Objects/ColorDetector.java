@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class ColorDetector {
 
@@ -22,13 +23,13 @@ public class ColorDetector {
         return data;
     }
 
-    public Optional<Color> findColor(String hex) {
+    public List<Color> findColor(String hex) {
         return this.findColor(Long.parseLong(hex,16));
     }
 
-    public Optional<Color> findColor(long value) {
+    public List<Color> findColor(long value) {
         return getData().stream().filter(
                 (color) -> color.existsInRange(value)
-        ).findFirst();
+        ).collect(Collectors.toList());
     }
 }
