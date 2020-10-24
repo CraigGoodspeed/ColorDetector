@@ -18,7 +18,7 @@ public class Start {
             List<ColorValue> data = Arrays.asList(mapper.readValue(new File(cls.getClassLoader().getResource("testData.json").getFile()), ColorValue[].class));
             data.forEach(
                     colorValue -> {
-                        List<Color> returned = detector.findColor(colorValue.getValue());
+                        List<Color> returned = detector.findColor(colorValue.getLongValue());
                         if(!returned.isEmpty()){
                             returned.forEach(
                                 c -> {
@@ -26,11 +26,20 @@ public class Start {
                                             String.format(
                                                     "found the color %s for value %s so the associated year is %s",
                                                     c.getName(),
-                                                    colorValue.getValue(),
+                                                    colorValue.getLongValue(),
                                                     c.getYear()
                                             ));
 
                                 }
+                            );
+                        }
+                        else {
+                            System.out.println(
+                                String.format(
+                                    "could not find color, %s with hex code. Consider re-evaluating the color configuration data.",
+                                    colorValue.getLongValue(),
+                                    colorValue.getHexValue()
+                                )
                             );
                         }
                     }

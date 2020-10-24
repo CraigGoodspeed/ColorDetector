@@ -2,6 +2,80 @@
   {
     "present": 1,
     "name": "pink",
-    "value": 16716943
+    "hexValue": "FFC0CB"
+  },
+  {
+    "present": 1,
+    "name": "pink",
+    "hexValue": "#FFB6C1"
+  },
+  {
+    "present": 1,
+    "name": "pink",
+    "hexValue": "#FF69B4"
+  },
+  {
+    "present": 1,
+    "name": "pink",
+    "hexValue": "#FF1493"
+  },
+  {
+    "present": 1,
+    "name": "pink",
+    "hexValue": "#DB7093"
+  },
+  {
+    "present": 1,
+    "name": "pink",
+    "hexValue": "#C71585"
+  },
+  {
+    "present": 1,
+    "name": "red",
+    "hexValue":"#FFA07A"
+  },
+  {
+    "present": 1,
+    "name": "red",
+    "hexValue":"#CD5C5C"
+  },
+  {
+    "present": 1,
+    "name": "red",
+    "hexValue":"#F08080"
+  },
+  {
+    "present": 1,
+    "name": "red",
+    "hexValue":"#E9967A"
+  },{
+  "present": 1,
+  "name": "red",
+  "hexValue":"#FA8072"
+  },
+  {
+    "present": 1,
+    "name": "red",
+    "hexValue":"#CD5C5C"
+  },
+  {
+    "present": 1,
+    "name": "red",
+    "hexValue":"#B22222"
+  },
+  {
+    "present": 1,
+    "name": "red",
+    "hexValue":"#FF0000"
+  },
+  {
+    "present": 1,
+    "name": "red",
+    "hexValue":"#DC143C"
+  },
+  {
+    "present": 1,
+    "name": "red",
+    "hexValue":"#8B0000"
   }
 ]
