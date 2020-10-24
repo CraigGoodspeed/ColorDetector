@@ -21,9 +21,24 @@
     "year": 2019
   },
   {
-    "color": "red",
+    "name": "yellow",
     "ranges": [
-
+      {
+        "max": 3674100,
+        "min": 3674199,
+        "variance": 0.05
+      }
+    ],
+    "year": 2015
+  },
+  {
+    "name": "green",
+    "ranges": [
+      {
+        "min": 1587248,
+        "max":1587248,
+        "variance": 0.05
+      }
     ],
     "year": 2020
   }
