@@ -46,6 +46,10 @@ public class Color {
     }
 
     public boolean existsInRange(long value) {
-        return Arrays.asList(getRanges()).stream().filter(range -> range.isInRange(value)).count() > 0;
+        for(Range item : ranges) {
+            if(item.isInRange(value))
+                return true;
+        }
+        return false;
     }
 }
