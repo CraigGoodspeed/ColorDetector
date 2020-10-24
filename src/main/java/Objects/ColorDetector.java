@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -28,8 +29,11 @@ public class ColorDetector {
     }
 
     public List<Color> findColor(long value) {
-        return getData().stream().filter(
-                (color) -> color.existsInRange(value)
-        ).collect(Collectors.toList());
+        List<Color> toReturn = new ArrayList<>();
+        for(Color item: data) {
+            if(item.existsInRange(value))
+                toReturn.add(item);
+        }
+        return toReturn;
     }
 }
