@@ -14,7 +14,16 @@ public class Start {
         try {
             Class<?> cls = Class.forName("Start");
             ColorDetector detector = new ColorDetector(cls.getClassLoader().getResource("colorconfig.json").getFile());
-            ObjectMapper mapper = new ObjectMapper();
+            String val = "FF183810";
+
+            List<Color> returned =  detector.findColor(val.substring(2));
+
+            if(returned.isEmpty())
+                System.out.println(String.format("could not find a value for detected color %s with the integer value %s", val, Integer.parseInt(val,16)));
+            else
+                System.out.println(returned.get(0).getYear());
+
+            /*ObjectMapper mapper = new ObjectMapper();
             List<ColorValue> data = Arrays.asList(mapper.readValue(new File(cls.getClassLoader().getResource("testData.json").getFile()), ColorValue[].class));
             data.forEach(
                     colorValue -> {
@@ -43,7 +52,7 @@ public class Start {
                             );
                         }
                     }
-            );
+            );*/
         }
         catch(ClassNotFoundException err){
             System.out.println(err);
